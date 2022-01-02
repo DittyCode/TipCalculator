@@ -1,0 +1,19 @@
+:root {
+	box-sizing: border-box;
+	font-family: $font-family;
+	font-size: $font-size;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+.wrapper {
+	height: 100vh;
+	@include flex-mother(column);
+	background-color: map-get($neutral-colors, neutralLighterGrayishCyan);
+}

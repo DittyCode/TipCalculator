@@ -1,0 +1,19 @@
+$font-family: 'Space Mono', monospace;
+$font-size: 62.5%;
+$font-weights: (
+	'fw400': 400,
+	'fw700': 700,
+);
+
+$primary-colors: (
+	'primaryCyan': hsl(172, 67%, 45%),
+);
+
+$neutral-colors: (
+	'neutralVeryDarkCyan': hsl(183, 100%, 15%),
+	'neutralDarkerGrayishCyan': hsl(186, 14%, 43%),
+	'neutralDarkGrayishCyan': hsl(184, 14%, 56%),
+	'neutralLighterGrayishCyan': hsl(185, 41%, 84%),
+	'neutralLightGrayishCyan': hsl(189, 41%, 97%),
+	'neutralWhite': hsl(0, 0%, 100%),
+);
