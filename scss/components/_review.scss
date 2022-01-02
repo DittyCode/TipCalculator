@@ -1,0 +1,38 @@
+.review {
+	@include flex-mother(column, flex-start);
+	@include sizing(60%, 100%);
+	justify-content: space-around;
+	padding: 3em;
+	margin-left: 3em;
+	background-color: map-get($neutral-colors, neutralVeryDarkCyan);
+	border-radius: 2em;
+	@include mq(876px) {
+		width: 90%;
+		padding: 2em;
+		margin: 2em 0 0 0;
+	}
+	&__item {
+		@include flex-mother();
+		width: 100%;
+		justify-content: space-between;
+	}
+	&__heading {
+		color: map-get($neutral-colors, neutralWhite);
+	}
+	&__description {
+		color: map-get($neutral-colors, neutralDarkGrayishCyan);
+		font-weight: map-get($font-weights, fw700);
+	}
+	&__count {
+		color: map-get($primary-colors, primaryCyan);
+		font-size: 3rem;
+	}
+	&__btn {
+		@extend %button;
+		@extend %heading;
+		@include sizing(100%, 40px);
+		cursor: pointer;
+		text-transform: uppercase;
+		background-color: map-get($primary-colors, primaryCyan);
+	}
+}

@@ -12,8 +12,11 @@
 	box-sizing: inherit;
 }
 
-.wrapper {
-	height: 100vh;
-	@include flex-mother(column);
+body {
 	background-color: map-get($neutral-colors, neutralLighterGrayishCyan);
+}
+
+.wrapper {
+	min-height: 100vh;
+	@include flex-mother(column);
 }

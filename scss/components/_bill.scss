@@ -1,11 +1,20 @@
 .main {
+	@include flex-mother();
+	justify-content: space-between;
 	width: clamp(340px, 50%, 700px);
-	height: clamp(400px, 50vh, 600px);
+	height: clamp(400px, 50vh, 700px);
+	padding: 4em;
 	border-radius: 2em;
 	background-color: map-get($neutral-colors, neutralWhite);
-	padding: 5em;
+	@include mq(1200px) {
+		flex-direction: column;
+		padding: 3em;
+	}
 	.bill {
-		width: 60%;
+		@include sizing(60%, 100%);
+		@include mq(867px) {
+			width: 90%;
+		}
 		&__label {
 			@extend %heading;
 		}
@@ -15,22 +24,10 @@
 			min-width: 200px;
 
 			img {
-				position: absolute;
-				top: 50%;
-				left: 10%;
-				transform: translate(-50%, -50%);
+				@include positioning(absolute, 50%, 10%);
 			}
 			input {
-				height: 100%;
-				width: 100%;
-				text-align: right;
-				padding-right: 1em;
-				background-color: map-get($neutral-colors, neutralLightGrayishCyan);
-				border: none;
-				outline: none;
-				font-size: 2rem;
-				font-weight: map-get($font-weights, fw700);
-				color: map-get($neutral-colors, neutralDarkerGrayishCyan);
+				@extend %input;
 				&:focus {
 					border: 2px solid map-get($primary-colors, primaryCyan);
 				}
@@ -38,40 +35,53 @@
 		}
 	}
 	.tip {
-		height: 100px;
 		margin-top: 3em;
 		&__heading {
 			@extend %heading;
 			margin-bottom: 1em;
 		}
+		&__input {
+			position: relative;
+			height: clamp(30px, 5vh, 40px);
+			min-width: 200px;
+			img {
+				@include positioning(absolute, 50%, 10%);
+			}
+			input {
+				@extend %input;
+				&:focus {
+					border: 2px solid map-get($primary-colors, primaryCyan);
+				}
+			}
+		}
+		&__label {
+			@extend %heading;
+			display: block;
+			margin-top: 2em;
+		}
 		&__buttons {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(70px, 30%));
-			grid-template-rows: repeat(2, 1fr);
 			grid-gap: 1em;
 		}
 		&__button {
 			@extend %heading;
+			@extend %button;
 			height: 50px;
-			background-color: map-get($neutral-colors, neutralVeryDarkCyan);
 			color: map-get($neutral-colors, neutralWhite);
 			cursor: pointer;
 			transition: 0.3s;
-			border: none;
-			border-radius: 0.5em;
 			&:hover {
 				background-color: map-get($primary-colors, primaryCyan);
 				color: map-get($neutral-colors, neutralVeryDarkCyan);
 			}
 		}
+
 		input {
 			@extend %heading;
+			@extend %button;
 			width: 100%;
 			text-align: center;
-			background-color: map-get($neutral-colors, neutralVeryDarkCyan);
-			color: map-get($neutral-colors, neutralWhite);
-			border: none;
-			border-radius: 0.5em;
 			transition: 0.3s;
 			&:focus {
 				background-color: map-get($neutral-colors, neutralWhite);

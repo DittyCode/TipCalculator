@@ -3,3 +3,20 @@
 	font-weight: map-get($font-weights, fw700);
 	color: map-get($neutral-colors, neutralDarkerGrayishCyan);
 }
+%button {
+	background-color: map-get($neutral-colors, neutralVeryDarkCyan);
+	color: map-get($neutral-colors, neutralWhite);
+	border: none;
+	border-radius: 0.5em;
+}
+
+%input {
+	@extend %heading;
+	@extend %button;
+	height: 100%;
+	width: 100%;
+	text-align: right;
+	padding-right: 1em;
+	background-color: map-get($neutral-colors, neutralLightGrayishCyan);
+	color: map-get($neutral-colors, neutralDarkerGrayishCyan);
+}
