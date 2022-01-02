@@ -31,17 +31,18 @@
 							id="bill-input"
 							name="bill-input"
 							placeholder="0"
+							data-bill
 						/>
 					</div>
 					<div class="tip">
 						<p class="tip__heading">Select Tip %</p>
 						<div class="tip__buttons">
-							<button class="tip__button">5%</button>
-							<button class="tip__button">10%</button
-							><button class="tip__button">15%</button>
-							<button class="tip__button">25%</button>
-							<button class="tip__button">50%</button>
-							<input type="text" placeholder="CUSTOM" />
+							<button class="tip__button" data-tip>5%</button>
+							<button class="tip__button" data-tip>10%</button
+							><button class="tip__button" data-tip>15%</button>
+							<button class="tip__button" data-tip>25%</button>
+							<button class="tip__button" data-tip>50%</button>
+							<input type="text" placeholder="CUSTOM" data-custom />
 						</div>
 					</div>
 					<label for="tip-people" class="tip__label"> Bill </label>
@@ -52,6 +53,7 @@
 							id="tip-people"
 							name="tip-people"
 							placeholder="0"
+							data-people
 						/>
 					</div>
 				</div>
@@ -61,16 +63,16 @@
 							<h2 class="review__heading">Tip Amount</h2>
 							<p class="review__description">/ person</p>
 						</div>
-						<h3 class="review__count">$0.00</h3>
+						<h3 class="review__count" data-amount>$0.00</h3>
 					</div>
 					<div class="review__item">
 						<div class="review__info">
 							<h2 class="review__heading">Total</h2>
 							<p class="review__description">/ person</p>
 						</div>
-						<h3 class="review__count">$0.00</h3>
+						<h3 class="review__count" data-total>$0.00</h3>
 					</div>
-					<button class="review__btn">Reset</button>
+					<button class="review__btn" data-reset>Reset</button>
 				</div>
 			</main>
 		</div>
